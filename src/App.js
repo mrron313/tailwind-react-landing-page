@@ -44,13 +44,37 @@ function App() {
 
 
       {/* Service Section */}
-
-      <div>
-
+      <div className='w-full mt-40 mb-40'>
+        <div className='container mx-auto text-center'>
+          <h4 className='font-bold text-4xl text-orange-main'>Our Service Feature</h4>
+          <p className='w-25 text-sm mt-5 mb-20 text-slate-500'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        
+          <div className='flex flex-row'>
+            {
+              [
+                {title: 'Web Development', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},
+                {title: 'Web Development', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},
+                {title: 'Web Development', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},
+              ].map(service => (
+                <div className='flex-1 border-2 px-5 py-12 m-4 border-r-8 rounded-xl border-r-orange-main'>
+                  <div className='text-center'>
+                    <div className='text-center flex flex-col items-center'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-main" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                      </svg>
+                    </div>
+                    <div className='mt-7'>
+                      <h4 className='text-orange-main uppercase font-bold mb-2'>{service.title}</h4>
+                      <p className='text-slate-700 mt-4'>{service.text}</p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
-
     </div>
-
   );
 }
 
